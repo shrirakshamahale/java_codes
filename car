@@ -1,0 +1,54 @@
+1. Car object in an Automobile application
+Write a class named car with attributes (brand, model, year and speed). Have a default
+constructor and also a parameterized constructor to initialize the object. Have following
+two methods:
+a. A method to display information about the car.
+b. Accelerate() which will take incrementSpeed as parameter and increases the speed of
+the car by incrementSpeed.
+Instantiate couple of cars from this class and display its information before and after
+speed increment.
+
+class Car {
+private String brand;
+private String model;
+private int year;
+private int speed;
+public Car() {
+this.brand = "Unknown";
+this.model = "Unknown";
+this.year = 0;
+this.speed = 0;
+}
+public Car(String brand, String model, int year, int speed) {
+this.brand = brand;
+this.model = model;
+this.year = year;
+this.speed = speed;
+}
+public void displayInfo() {
+System.out.println("Car Information: Brand: " + brand + ",
+Model: " + model + ", Year: " + year + ", Speed: " + speed + " km/h");
+}
+
+public void accelerate(int incrementSpeed) {
+this.speed += incrementSpeed;
+System.out.println("The car has been accelerated by " +
+incrementSpeed + " km/h. New speed: " + speed + " km/h");
+}
+public static void main(String[] args) {
+
+Car car1 = new Car("Toyota", "Corolla", 2020, 60);
+Car car2 = new Car("Honda", "Civic", 2022, 80);
+
+System.out.println("Before acceleration:");
+car1.displayInfo();
+car2.displayInfo();
+
+car1.accelerate(20);
+car2.accelerate(30);
+System.out.println("\nAfter acceleration:");
+car1.displayInfo();
+car2.displayInfo();
+}
+}
+

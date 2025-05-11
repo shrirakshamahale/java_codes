@@ -1,0 +1,17 @@
+class Person{
+    int height;
+    void add10(Person o){
+        o.height+=10;
+    }
+}
+public class ArgumentPassByRef {
+    public static void main(String args[])
+    {
+        Person ob=new Person();
+        ob.height=150;
+        System.out.println("height o before a call:" +ob.height);
+        ob.add10(ob);
+        System.out.println("value after a call:"+ob.height);
+    }
+    
+}

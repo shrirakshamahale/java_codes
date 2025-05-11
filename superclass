@@ -1,0 +1,66 @@
+class human{
+     String name;
+     int age;
+ 
+     human()
+     {
+        name="";
+        age=0;
+        System.out.println("\n Iam just born");
+     }
+
+     human(String n,int  a)
+     {
+        name=n;
+        age=a;
+     }
+
+     void speak(){
+        System.out.println("my name is: "+name+"\nmy age is: "+age);
+     }
+}
+
+class student extends human{
+        String student_id;
+        String standard;
+     
+    student(String n, int a,String sid,String std)
+    {
+      super(n,a);
+      student_id=sid;
+      standard=std;
+    }
+   void speak(){
+      super.speak();
+      System.out.println("iam studying in standard"+standard+"\nmy student id is "+student_id);
+
+   }
+
+}
+class PG_student extends student{
+   String specialization;
+   
+   PG_student(String name,int age,String student_id,String standard,String specialization){
+      super(name,age,student_id,standard);
+      this.specialization=specialization;
+   }
+   void research(){
+      System.out.println("iam a post graduate student spealizing in "+specialization);
+   }
+}
+
+
+  
+public class humanexample{
+     public static void main(String args[])
+     {
+        human b=new human();
+        human h=new human("manav",20);
+        student s=new student("Aparmitha",17,"s12345","12th");
+        PG_student pg = new PG_student("Ravi", 24, "pg56789", "MSc", "Data Science");
+        h.speak();
+        s.speak();
+        pg.speak();
+        pg.research();
+     }
+   }

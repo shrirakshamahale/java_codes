@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class throwexample {
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        try{
+            System.out.print("enter your age");
+            int age =scanner.nextInt();
+
+            if(age<0){
+                throw new IllegalArgumentException("Age cannot be negetive");
+            }
+            System.out.println("your age is :"+age);
+        }
+        catch(IllegalArgumentException e){
+            System.out.println("exception  caught"+e.getMessage());
+        }
+    }
+}
+
+
+
+PS C:\Users\Lenovo\Desktop\197> java throwexample.java
+enter your age-23
+exception  caughtAge cannot be negetive

@@ -1,0 +1,50 @@
+class human{
+     String name;
+     int age;
+ 
+     human()
+     {
+        name="";
+        age=0;
+        System.out.println("\n Iam just born");
+     }
+
+     human(String n,int  a)
+     {
+        name=n;
+        age=a;
+     }
+
+     void speak(){
+        System.out.println("my name is: "+name+"\nmy age is: "+age);
+     }
+}
+
+class student extends human{
+        String student_id;
+        String standard;
+     
+    student(String n, int a,String sid,String std)
+    {
+      super(n,a);
+      student_id=sid;
+      standard=std;
+    }
+   void speak(){
+      super.speak();
+      System.out.println("iam studying in standard"+standard+"\nmy student id is "+student_id);
+
+   }
+
+}
+  
+public class humanexample{
+     public static void main(String args[])
+     {
+        human h=new human("manav",20);
+        student s=new student("Aparmitha",17,"s12345","12th");
+        h.speak();
+        s.speak();
+     }
+
+ }

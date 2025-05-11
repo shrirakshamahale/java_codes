@@ -1,0 +1,29 @@
+class Person {
+    private int age;    // Private variable
+    public int height;  // Public variable
+
+    // Constructor with public access
+    public Person(int a, int h) {
+        age = a;
+        height = h;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+}
+
+class AccessControl {
+    public static void main(String args[]) {
+        // Create an object of Person class
+        Person P1 = new Person(21, 165);
+        
+        // Get the age using the getter method
+        int tempAge = P1.getAge();
+        System.out.println("Age of P1: " + tempAge);
+        
+        // Access height directly as it's public
+        System.out.println("Height of P1: " + P1.height);
+    }
+}

@@ -1,0 +1,27 @@
+class person{
+    int height;
+    person(int h){
+        height= h;
+    }
+
+person add10(person p)
+{
+    person temp =new person(height+10);
+    return temp;
+}
+}
+
+
+
+
+public class returningobject {
+    public static void main(String args[])
+    {
+        person p1=new person(150);
+        person p2;
+        p2=p1.add10(p1);
+        System.out.println("height of person 1: " +p1.height);
+        System.out.println("height of person 2: " +p2.height );
+    }
+    
+}

@@ -1,0 +1,64 @@
+class Box{
+    double length,width , height;
+
+    Box(){
+        length =1;
+        width=1;
+        height=1;
+    }
+
+    Box(double l,double w,double h){
+    length =l;
+    width=w;
+    height=h;
+    }
+
+    Box(double l,double w){
+        length =l;
+        width=w;
+        height=1;
+        }
+
+   double calculateVolume(){
+    return length*width*height;
+}
+
+    double calculateSurfacearea(){
+    return 2*(length*width+width*height+length*height);
+  }
+
+ void displayDetails(){
+         System.out.println("Box Dimension;"+length+"x"+width+"x"+height);
+         System.out.println("Volume ;"+calculateVolume());
+         System.out.println("area ;"+calculateSurfacearea());
+
+                 
+}
+}
+
+public class constructeroverloading{
+   public static void main(String[] args){
+  
+   Box Box1=new Box(1,2,3);
+   Box Box2=new Box(3,4,6);
+   Box Box3=new Box();
+   Box Box4=new Box(2,3);
+   
+   Box1.displayDetails();
+   Box2.displayDetails();
+   Box3.displayDetails();
+   Box4.displayDetails();
+
+
+
+   System.out.println("Box1 Volume="+ Box1.calculateVolume());
+   System.out.println("Box2 Volume="+ Box2.calculateVolume());
+    System.out.println("Box1 area="+ Box1.calculateSurfacearea());
+    System.out.println("Box2 area="+ Box2.calculateSurfacearea());
+    System.out.println("Box3 area="+ Box3.calculateSurfacearea());
+    System.out.println("Box4 area="+ Box4.calculateSurfacearea());
+    System.out.println("Box3 area="+ Box3.calculateVolume());
+    System.out.println("Box4 area="+ Box4.calculateVolume());
+
+}
+}
